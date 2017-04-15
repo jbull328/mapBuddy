@@ -1,22 +1,24 @@
 {
-  "name": "mapbuddy",
+  "name": "first-webapp-react",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "main.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "watchify -v -d -t [ reactify --es6 ] main.js -o compiled.js",
     "build": "NODE_ENV=production browserify -t [ reactify --es6 ] main.js | uglifyjs > compiled.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tutorialzine",
+  "license": "MIT",
   "dependencies": {
-    "browserify": "^14.3.0",
-    "moment": "^2.18.1",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "reactify": "^1.1.1",
-    "uglify-js": "^2.8.22",
-    "watchify": "^3.9.0"
+    "moment": "^2.10.2",
+    "react": "^0.13.2"
+  },
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "reactify": "^1.1.0",
+    "uglify-js": "^2.4.20",
+    "watchify": "^3.1.2"
   }
 }
