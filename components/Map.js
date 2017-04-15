@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDom = require('react-dom');
 
 var Map = React.createClass({
 
@@ -18,6 +19,7 @@ var Map = React.createClass({
         this.lastLng = this.props.lng;
 
         var map = new GMaps({
+            key: 'AIzaSyDTdni92tmXsYIFPm1rnTa3gk6ZKmeDX_I',
             el: '#map',
             lat: this.props.lat,
             lng: this.props.lng
