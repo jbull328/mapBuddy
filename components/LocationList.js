@@ -5,7 +5,7 @@ var LocationList = React.createClass({
 
     render(){
 
-        var self - this;
+        var self = this;
 
         var location = this.props.location.map(function(l) {
             var active = self.props.activeLocationAddress == l.address;

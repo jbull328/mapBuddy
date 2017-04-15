@@ -114,7 +114,7 @@ var App = React.createClass({
     render(){
         return (
           <div>
-            <h1>Your Google Maps Locations<h1>
+            <h1>Your Google Maps Locations</h1>
             <Map lat={this.state.mapCoodinates.lat} lng={this.state.mapCoodinates.lng} />
 
             <CurrentLocation address={this.state.currentAddress}
