@@ -18,14 +18,13 @@ var App = React.createClass({
 			favorites = JSON.parse(localStorage.favorites);
 		}
 
-		// Nobody would get mad if we center it on Paris by default
-
+		//I changed the lat and lon to a local city :)
 		return {
 			favorites: favorites,
-			currentAddress: 'Paris, France',
+			currentAddress: 'Modesto, California',
 			mapCoordinates: {
-				lat: 48.856614,
-				lng: 2.3522219
+				lat: 37.6391,
+				lng: -120.9969
 			}
 		};
 	},
@@ -74,7 +73,7 @@ var App = React.createClass({
 		// If it was found, remove it from the favorites array
 
 		if(index !== -1){
-			
+
 			favorites.splice(index, 1);
 
 			this.setState({
@@ -102,7 +101,7 @@ var App = React.createClass({
 	},
 
 	searchForAddress(address){
-		
+
 		var self = this;
 
 		// We will use GMaps' geocode functionality,
@@ -140,11 +139,11 @@ var App = React.createClass({
 
 				<Map lat={this.state.mapCoordinates.lat} lng={this.state.mapCoordinates.lng} />
 
-				<CurrentLocation address={this.state.currentAddress} 
-					favorite={this.isAddressInFavorites(this.state.currentAddress)} 
+				<CurrentLocation address={this.state.currentAddress}
+					favorite={this.isAddressInFavorites(this.state.currentAddress)}
 					onFavoriteToggle={this.toggleFavorite} />
 
-				<LocationList locations={this.state.favorites} activeLocationAddress={this.state.currentAddress} 
+				<LocationList locations={this.state.favorites} activeLocationAddress={this.state.currentAddress}
 					onClick={this.searchForAddress} />
 
 			</div>

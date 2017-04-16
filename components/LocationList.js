@@ -14,7 +14,7 @@ var LocationList = React.createClass({
 			// Notice that we are passing the onClick callback of this
 			// LocationList to each LocationItem.
 
-			return <LocationItem address={l.address} timestamp={l.timestamp} 
+			return <LocationItem address={l.address} timestamp={l.timestamp}
 					active={active} onClick={self.props.onClick} />
 		});
 
@@ -28,9 +28,7 @@ var LocationList = React.createClass({
 				{locations}
 			</div>
 		)
-
 	}
-
 });
 
 module.exports = LocationList;
